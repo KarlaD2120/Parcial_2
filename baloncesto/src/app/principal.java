@@ -59,7 +59,7 @@ public class principal extends javax.swing.JFrame {
 
         btn5.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 24)); // NOI18N
         btn5.setForeground(new java.awt.Color(255, 255, 255));
-        btn5.setText("Consultar");
+        btn5.setText("Efectividad");
         btn5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn5ActionPerformed(evt);
@@ -153,19 +153,25 @@ public class principal extends javax.swing.JFrame {
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
         // TODO add your handling code here:
         Agregar p1 = new Agregar();
-        showPanel1(p1.getFondo());
+        showPanel1(p1.getFondo5());
     }//GEN-LAST:event_btn1ActionPerformed
 
     private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
         // TODO add your handling code here:
+        Efectividad k1 = new Efectividad();
+        showPanel1(k1.getFondo7());
     }//GEN-LAST:event_btn5ActionPerformed
 
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
         // TODO add your handling code here:
+        eliminar n1 = new eliminar();
+        showPanel1(n1.getFondo4());
     }//GEN-LAST:event_btn3ActionPerformed
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
         // TODO add your handling code here:
+        consultar l1 = new consultar();
+        showPanel1(l1.getFondo6());        
     }//GEN-LAST:event_btn4ActionPerformed
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed

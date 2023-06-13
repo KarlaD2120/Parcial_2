@@ -10,12 +10,12 @@ import javax.swing.JPanel;
  *
  * @author david
  */
-public class Agregar extends javax.swing.JPanel {
+public class consultar extends javax.swing.JPanel {
 
     /**
-     * Creates new form Agregar
+     * Creates new form consultar
      */
-    public Agregar() {
+    public consultar() {
         initComponents();
     }
 
@@ -28,21 +28,21 @@ public class Agregar extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panelAgregar = new javax.swing.JPanel();
+        panelConsultar = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        panelAgregar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        panelAgregar.setMinimumSize(new java.awt.Dimension(774, 410));
-        panelAgregar.setPreferredSize(new java.awt.Dimension(774, 484));
+        panelConsultar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        panelConsultar.setMinimumSize(new java.awt.Dimension(774, 410));
+        panelConsultar.setPreferredSize(new java.awt.Dimension(774, 484));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Agregar registros");
+        jLabel4.setText("Consultar");
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton1.setText("Atras");
@@ -54,54 +54,52 @@ public class Agregar extends javax.swing.JPanel {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/recursos/BASKET_3.png"))); // NOI18N
 
-        javax.swing.GroupLayout panelAgregarLayout = new javax.swing.GroupLayout(panelAgregar);
-        panelAgregar.setLayout(panelAgregarLayout);
-        panelAgregarLayout.setHorizontalGroup(
-            panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelAgregarLayout.createSequentialGroup()
-                .addGap(270, 270, 270)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(panelAgregarLayout.createSequentialGroup()
+        javax.swing.GroupLayout panelConsultarLayout = new javax.swing.GroupLayout(panelConsultar);
+        panelConsultar.setLayout(panelConsultarLayout);
+        panelConsultarLayout.setHorizontalGroup(
+            panelConsultarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelConsultarLayout.createSequentialGroup()
+                .addGap(328, 328, 328)
+                .addComponent(jLabel4))
+            .addGroup(panelConsultarLayout.createSequentialGroup()
                 .addGap(600, 600, 600)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(jLabel2)
         );
-        panelAgregarLayout.setVerticalGroup(
-            panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelAgregarLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
+        panelConsultarLayout.setVerticalGroup(
+            panelConsultarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelConsultarLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(359, 359, 359)
+                .addGap(351, 351, 351)
                 .addComponent(jButton1))
             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        add(panelAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
+        add(panelConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         principal p1 = new principal();
         showPanel2(p1.getFondo2());
-
     }//GEN-LAST:event_jButton1ActionPerformed
-
-public JPanel getFondo5() {
-        return panelAgregar;
+public JPanel getFondo6() {
+        return panelConsultar;
     }
 private void showPanel2(JPanel p){
         p.setSize(1150, 694);
         p.setLocation(0, 0);
-        panelAgregar.removeAll();
-        panelAgregar.add(p, new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
-        panelAgregar.revalidate();
-        panelAgregar.repaint();
+        panelConsultar.removeAll();
+        panelConsultar.add(p, new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        panelConsultar.revalidate();
+        panelConsultar.repaint();
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel panelAgregar;
+    private javax.swing.JPanel panelConsultar;
     // End of variables declaration//GEN-END:variables
 }
