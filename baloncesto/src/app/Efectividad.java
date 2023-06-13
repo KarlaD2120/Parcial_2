@@ -29,6 +29,8 @@ public class Efectividad extends javax.swing.JPanel {
     private void initComponents() {
 
         panelEfectividad = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tablaEfectividad = new javax.swing.JTable();
         jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -38,11 +40,40 @@ public class Efectividad extends javax.swing.JPanel {
         panelEfectividad.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         panelEfectividad.setMinimumSize(new java.awt.Dimension(774, 410));
         panelEfectividad.setPreferredSize(new java.awt.Dimension(774, 484));
+        panelEfectividad.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tablaEfectividad.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "id", "Nombre", "Apellido", "Tiros lanzados", "Tiros encestado", "% Efectividad"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(tablaEfectividad);
+
+        panelEfectividad.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, -1, 140));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Tabla de efectividad");
+        panelEfectividad.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, -1, 50));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton1.setText("Atras");
@@ -51,31 +82,10 @@ public class Efectividad extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
+        panelEfectividad.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(602, 422, 150, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/recursos/BASKET_3.png"))); // NOI18N
-
-        javax.swing.GroupLayout panelEfectividadLayout = new javax.swing.GroupLayout(panelEfectividad);
-        panelEfectividad.setLayout(panelEfectividadLayout);
-        panelEfectividadLayout.setHorizontalGroup(
-            panelEfectividadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelEfectividadLayout.createSequentialGroup()
-                .addGap(600, 600, 600)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(panelEfectividadLayout.createSequentialGroup()
-                .addGap(258, 258, 258)
-                .addComponent(jLabel4))
-            .addComponent(jLabel2)
-        );
-        panelEfectividadLayout.setVerticalGroup(
-            panelEfectividadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelEfectividadLayout.createSequentialGroup()
-                .addGap(420, 420, 420)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(panelEfectividadLayout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+        panelEfectividad.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 2, -1, 490));
 
         add(panelEfectividad, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
@@ -101,6 +111,8 @@ private void showPanel2(JPanel p){
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel panelEfectividad;
+    private javax.swing.JTable tablaEfectividad;
     // End of variables declaration//GEN-END:variables
 }
