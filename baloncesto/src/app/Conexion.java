@@ -1,47 +1,60 @@
 //prueba
 package app;
 
-import java.beans.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+
+
 
 public class Conexion {
-    private static final String URL = "jdbc:sqlserver://localhost:1433;databaseName=CompetenciaTirosAlAro";
-    private static final String USER = "sa";
-    private static final String PASSWORD = "12345678";
-
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-        // Paso 1: Registrar el controlador JDBC
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-        } catch (ClassNotFoundException e) {
-            System.out.println("Error al registrar el controlador JDBC: " + e.getMessage());
-            return;
-        }
-
-        Connection connection = null;
+       
+        Connection conexion = null;
         Statement sentencia = null;
-
         try {
-            // Paso 2: Establecer la conexión
-            connection = DriverManager.getConnection(URL, USER, PASSWORD);
+            // Paso 1: Cargar el driver:
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            // Paso 2:
+            String url = "jdbc:sqlserver://localhost:1433;databaseName=CompetenciaTirosAlAro;TrustServerCertificate=True;";
+            //String url = "jdbc:sqlserver://localhost:1433;databaseName=mysql;TrustServerCertificate=True;";
+            conexion = DriverManager.getConnection(url, "sa", "12345678");
+            // Paso 3: Crear una sentencia: 
+            sentencia = conexion.createStatement();
+            // Paso 4: Ejecutar una consulta:
+            String consulta = "select * from Empleados";
+            ResultSet resultado = sentencia.executeQuery(consulta);
 
-            // Paso 3: Realizar operaciones con la base de datos
-
-            System.out.println("Conexión exitosa a la base de datos");
-
-        } catch (SQLException e) {
-            System.out.println("Error al conectarse a la base de datos: " + e.getMessage());
+            /* Paso 5: Manipilar los resultados:
+            System.out.println("El resultado de la consulta es:");
+            System.out.printf("%-30s %-30s %s%n", "Nombre", "Apellido", "Salario");
+            while (resultado.next()) {
+                String nombre = resultado.getString("nombre");
+                String apellido = resultado.getString("apellido");
+                double salario = resultado.getDouble("salario");
+                System.out.printf("%-30s %-30s %7.2f%n", nombre, apellido, salario);
+            }*/
+        } catch (ClassNotFoundException ex) {
+            System.out.println("Error: no se encuentra el archivo de la");
+            System.out.println("clase para la conexión con la base de datos.");
+            ex.printStackTrace();
+        } catch (SQLException ex) {
+            System.out.println("Error de conexión a la base de datos.");
+            ex.printStackTrace();
         } finally {
-            // Paso 4: Cerrar la conexión
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    System.out.println("Error al cerrar la conexión: " + e.getMessage());
-                }
+            try {
+                sentencia.close();
+                conexion.close();
+            } catch (SQLException ex) {
+                System.out.println("Error en cierre de conexión.");
             }
+
         }
     }
+    
 }
