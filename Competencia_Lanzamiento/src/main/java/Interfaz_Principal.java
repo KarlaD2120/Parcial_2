@@ -51,18 +51,43 @@ public class Interfaz_Principal extends javax.swing.JFrame {
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, -1, -1));
 
         btnEfectividad.setText("Enter");
+        btnEfectividad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEfectividadActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnEfectividad, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 400, -1, -1));
 
         btnAgregar.setText("Enter");
+        btnAgregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, -1, -1));
 
         btnEliminar.setText("Enter");
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 300, -1, -1));
 
         btnModificar.setText("Enter");
+        btnModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 240, -1, -1));
 
         btnConsultar.setText("Enter");
+        btnConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsultarActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 350, -1, -1));
 
         jLabel9.setBackground(new java.awt.Color(255, 255, 255));
@@ -117,6 +142,46 @@ public class Interfaz_Principal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
+        Agregar_Registros newFrame = new Agregar_Registros(); 
+
+        newFrame.setVisible(); 
+
+        this.dispose();
+    }//GEN-LAST:event_btnAgregarActionPerformed
+
+    private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
+        Modificar_Registros newFrame = new Modificar_Registros(); 
+
+        newFrame.setVisible(); 
+
+        this.dispose();
+    }//GEN-LAST:event_btnModificarActionPerformed
+
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+        Eliminar_Registros newFrame = new Eliminar_Registros(); 
+
+        newFrame.setVisible(); 
+
+        this.dispose();
+    }//GEN-LAST:event_btnEliminarActionPerformed
+
+    private void btnConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarActionPerformed
+        Consultar_Registros newFrame = new Consultar_Registros(); 
+
+        newFrame.setVisible(); 
+
+        this.dispose();
+    }//GEN-LAST:event_btnConsultarActionPerformed
+
+    private void btnEfectividadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEfectividadActionPerformed
+        Efectividad_Participantes newFrame = new Efectividad_Participantes(); 
+
+        newFrame.setVisible(); 
+
+        this.dispose();
+    }//GEN-LAST:event_btnEfectividadActionPerformed
 
     /**
      * @param args the command line arguments
