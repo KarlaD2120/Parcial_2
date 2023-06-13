@@ -29,8 +29,9 @@ public class Agregar extends javax.swing.JPanel {
     private void initComponents() {
 
         panelAgregar = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -38,8 +39,10 @@ public class Agregar extends javax.swing.JPanel {
         panelAgregar.setMinimumSize(new java.awt.Dimension(774, 410));
         panelAgregar.setPreferredSize(new java.awt.Dimension(774, 484));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabel1.setText("Agregar");
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Agregar registros");
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton1.setText("Atras");
@@ -49,24 +52,28 @@ public class Agregar extends javax.swing.JPanel {
             }
         });
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/recursos/BASKET_3.png"))); // NOI18N
+
         javax.swing.GroupLayout panelAgregarLayout = new javax.swing.GroupLayout(panelAgregar);
         panelAgregar.setLayout(panelAgregarLayout);
         panelAgregarLayout.setHorizontalGroup(
             panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelAgregarLayout.createSequentialGroup()
-                .addGap(298, 298, 298)
-                .addComponent(jLabel1))
+                .addGap(270, 270, 270)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(panelAgregarLayout.createSequentialGroup()
-                .addGap(588, 588, 588)
+                .addGap(600, 600, 600)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jLabel2)
         );
         panelAgregarLayout.setVerticalGroup(
             panelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelAgregarLayout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(jLabel1)
-                .addGap(302, 302, 302)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(300, 300, 300)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         add(panelAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
@@ -93,7 +100,8 @@ private void showPanel2(JPanel p){
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel panelAgregar;
     // End of variables declaration//GEN-END:variables
 }
