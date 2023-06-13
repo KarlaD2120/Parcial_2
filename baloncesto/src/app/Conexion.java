@@ -27,7 +27,7 @@ public class Conexion {
             // Paso 3: Crear una sentencia: 
             sentencia = conexion.createStatement();
             // Paso 4: Ejecutar una consulta:
-            String consulta = "select * from Empleados";
+            String consulta = "select * from Participantes";
             ResultSet resultado = sentencia.executeQuery(consulta);
 
             /* Paso 5: Manipilar los resultados:
